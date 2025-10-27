@@ -16,8 +16,8 @@ This experiment demonstrates the concept of current mirroring — where an outpu
 
 ## 🧩 Circuit Description
 The designed circuit implements a **current mirror** using MOSFETs from the IHP OpenPDK library.  
-- **Transistor M5** acts as the **reference transistor**, setting the input current.  
-- **Transistor M7** acts as the **output transistor**, designed to replicate the reference current.  
+- **MOS M5** acts as the **reference MOS**, setting the input current.  
+- **MOS M7** acts as the **output MOS**, designed to replicate the reference current.  
 - Two **330 Ω resistors (R1 and R2)** are connected in the reference and output branches respectively, to measure and verify the mirrored current.
 
 ### 🖼️ Schematic Diagram
@@ -30,9 +30,9 @@ Below is the circuit schematic of the Current Mirror:
 ## ⚡ Working Principle
 A **current mirror** is a fundamental analog circuit used to copy a current from one branch to another.  
 Here’s how it works:
-1. The **reference current (Iref)** flows through transistor **M5**, setting up a gate-source voltage (V<sub>GS</sub>) common to both transistors.
-2. The **output transistor (M7)** shares the same V<sub>GS</sub> and thus conducts a nearly identical current (**Iout ≈ Iref**).
-3. The **ratio of output to reference current** can be controlled by the transistor size (W/L ratio), but in this design both are identical for unity mirroring.
+1. The **reference current (Iref)** flows through MOS **M5**, setting up a gate-source voltage (V<sub>GS</sub>) common to both MOS.
+2. The **output MOS (M7)** shares the same V<sub>GS</sub> and thus conducts a nearly identical current (**Iout ≈ Iref**).
+3. The **ratio of output to reference current** can be controlled by the MOS size (W/L ratio), but in this design both are identical for unity mirroring.
 4. Small deviations arise due to mismatch and channel-length modulation.
 
 ---
@@ -88,4 +88,4 @@ The simulation results confirm that the circuit effectively **mirrors the refere
 
 ---
 
-## 📂 Repository Structure
+
