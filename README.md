@@ -25,6 +25,7 @@ Below is the circuit schematic of the Current Mirror:
 
 ![Current Mirror Schematic](./Current_Mirror_Schematic.png)
 
+
 ---
 
 ## ⚡ Working Principle
@@ -79,6 +80,7 @@ The output current closely matches the input current, validating the **current m
 Measured voltage readings from eSim multimeters:
 
 ![Current Mirror Output](./Current_Mirror_Output.png)
+![Current Mirror Waveform](./Current_Mirror_Waveform.png)
 
 ---
 
