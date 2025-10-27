@@ -1,0 +1,27 @@
+.title kicad schematic
+
+.lib /home/om_11/ihp/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
+xm8 net-_m4-d_ net-_m6-b_ net-_m12-d_ net-_m12-d_ sg13_hv_nmos
+xm12 net-_m12-d_ net-_m11-d_ esim_gnd esim_gnd sg13_hv_nmos
+xm9 net-_m10-g_ net-_m10-g_ esim_gnd esim_gnd sg13_hv_nmos
+xm5 iin iin net-_m10-g_ net-_m10-g_ sg13_hv_nmos
+r2 iout_rg iout 330
+xm11 net-_m11-d_ net-_m10-b_ esim_gnd esim_gnd sg13_hv_nmos
+xm10 net-_m10-d_ net-_m10-g_ esim_gnd net-_m10-b_ sg13_hv_nmos
+xm6 net-_m3-d_ iin net-_m10-d_ net-_m6-b_ sg13_hv_nmos
+xm7 iout net-_m4-d_ net-_m11-d_ net-_m11-d_ sg13_hv_nmos
+xm4 net-_m4-d_ net-_m3-d_ net-_m2-d_ net-_m2-d_ sg13_hv_pmos
+xm2 net-_m2-d_ net-_m1-d_ esim_vcc esim_vcc sg13_hv_pmos
+r1 iin iin_r 330
+xm1 net-_m1-d_ net-_m1-d_ esim_vcc esim_vcc sg13_hv_pmos
+vv1 iin_r iout_rg  dc 4
+xm3 net-_m3-d_ net-_m3-d_ net-_m1-d_ net-_m1-d_ sg13_hv_pmos
+.tran 0.1e-03 10e-03 0e-03
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
